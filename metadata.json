@@ -1,0 +1,6 @@
+{
+  "name": "Subsurface — C++ Search Engine",
+  "description": "An immersive, scroll-driven 3D web interface for the Subsurface C++ search engine. Descend beneath the calm surface into the index.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

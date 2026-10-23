@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-surface-amber: #e88241;
+  --color-surface-orange: #f26629;
+  --color-surface-vermilion: #d33c2a;
+  --color-surface-dusk: #1b1216;
+  
+  --color-underwater-deep: #05161d;
+  --color-underwater-teal: #0d4653;
+  --color-underwater-cyan: #26b5bb;
+  --color-underwater-glow: #64e3da;
+}
+
+:root {
+  --color-theme-bg: #070b10;
+  --color-theme-text: #f4ede4;
+  --color-theme-text-muted: #94a3b8;
+  --color-theme-glass-bg: rgba(12, 23, 30, 0.72);
+  --color-theme-glass-border: rgba(255, 255, 255, 0.12);
+  --color-theme-pill-bg: rgba(15, 28, 36, 0.65);
+  --color-theme-pill-text: #f4ede4;
+  --color-theme-accent: #64e3da;
+}
+
+@layer base {
+  html, body {
+    font-family: var(--font-sans);
+    background-color: var(--color-theme-bg);
+    color: var(--color-theme-text);
+    scroll-behavior: auto;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(5, 22, 29, 0.4);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 227, 218, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 227, 218, 0.5);
+}
+
+/* Glassmorphism helpers linked to continuous sky theme tokens */
+.glass-panel {
+  background: var(--color-theme-glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-theme-glass-border);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.45);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-pill {
+  background: var(--color-theme-pill-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-theme-glass-border);
+  color: var(--color-theme-pill-text);
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.glass-pill-active {
+  background: rgba(255, 255, 255, 0.95);
+  color: #0c171e;
+  border-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 18px rgba(255, 255, 255, 0.22);
+}
+
+.text-glow {
+  text-shadow: 0 0 24px rgba(255, 140, 70, 0.45);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 24px rgba(100, 227, 218, 0.5);
+}
+
+/* Font helpers */
+.font-serif-italic {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-style: italic;
+}
+
+.font-sans-clean {
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
